@@ -27,7 +27,7 @@ class Vehiculo:
                 print (f"El Vehiculo esta avanzando sin problemas quedan {self.combustible_tanque} galones en el tanque")   
             
             elif (((self.combustible_tanque / self.combustible_maximo * 100)) <= 10):
-                print(f"Quedan {self.combustible_tanque} galones, el carro se va a detener pronto vaya a una gasolinera")
+                print(f"Quedan {self.combustible_tanque} galones, el/la {self.tipo} se va a detener pronto vaya a una gasolinera")
             
             self.combustible_tanque -= 1
             time.sleep(1)
@@ -47,12 +47,12 @@ class Moto(Vehiculo):
     def __init__(self, marca, combustible, combustible_tanque):
         super().__init__(marca, combustible, combustible_tanque)
         self.tipo = "Moto"
-        self.combustible_maximo = 8   
+        self.combustible_maximo = 10  
 
 carro = Carro("BMW", "Corriente", 16)
 carro.encender()
 carro.arrancar()
 
-moto = Moto("Honda", "Corriente", 5)
+moto = Moto("Honda", "Corriente", 10)
 moto.encender()
 moto.arrancar()
