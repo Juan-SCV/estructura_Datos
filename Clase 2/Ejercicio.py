@@ -7,8 +7,8 @@ class Cultura_2015:
     edades = float
     promedio = float
 
-    def __init__(self, archivo, referencia, nombre):
-        self.df = pd.read_csv(archivo, sep=";")
+    def __init__(self,referencia, nombre):
+        self.df = pd.read_csv(referencia, sep=";")
         self.referencia = referencia
         self.nombre = nombre
 
@@ -20,13 +20,11 @@ class Cultura_2015:
         print("La suma de las edades es de", self.suma)
         
     def promedio_edades(self):
-        self.suma = self.df['años'].sum()
         self.edades = len(self.df['años'])
         self.promedio = self.suma / self.edades
         print("La edad promedio en el censo es de", self.promedio)
 
-archivo_df = "http://medata.gov.co/sites/default/files/medata_harvest_files/encuesta_cultura_2015.csv"
-cultura = Cultura_2015(archivo_df, Cultura_2015.referencia, Cultura_2015.nombre)
+cultura = Cultura_2015(Cultura_2015.referencia, Cultura_2015.nombre)
 print(cultura) 
 cultura.suma_edades()
 cultura.promedio_edades()
