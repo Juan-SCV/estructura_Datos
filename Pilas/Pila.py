@@ -48,8 +48,8 @@ class Stack:
             num_nodes += 1
 
     def fill_stack(self, num_nodes):
-        data = [random.randint(1, 20) for a in range(num_nodes)]
-        return data
+        for a in range(num_nodes):
+            self.push(random.randint(1, 20)) 
 
 stack = Stack()
 num_nodes = int(input("Enter the number of nodes to create: "))
@@ -57,8 +57,6 @@ if num_nodes == 0:
     print("Empty stack")
 else:
     random_data = stack.fill_stack(num_nodes)
-    for data_point in random_data:
-        stack.push(data_point)
     print("Initial Stack:")
     stack.print_stack()
 
@@ -66,5 +64,3 @@ else:
     stack.remove_node(data_to_remove)
     print("Stack after removing the node:")
     stack.print_stack()
-
-
