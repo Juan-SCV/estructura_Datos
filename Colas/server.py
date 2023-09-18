@@ -19,7 +19,7 @@ def estado():
     elementos = cola.contar()
     return {"status": "ok", "elementos": elementos}
 
-@app.get("/encolar")
+@app.post("/encolar")
 def encolar(item: dict):
     cola.encolar(item)
     return {"status": "ok"}
