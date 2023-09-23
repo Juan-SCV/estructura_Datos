@@ -40,7 +40,6 @@ def ver_primero():
     if elemento:
         return {"status": "ok", "elemento": elemento}    
 
-
 @app.get("/ver_ultimo")
 def ver_ultimo():
     elemento = cola.ver_ultimo()
