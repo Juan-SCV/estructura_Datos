@@ -25,5 +25,7 @@ fin_b = time.time()
 time_b = (fin_b-inicio_b)
 print(time_b)
 
-min_number = ordenado[0]
-print(min_number)
+inicio_c = time.time()
+print("El valor Minimo es: ", ordenado[0])
+fin_c = time.time()
+print("El tiempo de busqueda del valor minimo fue:" , fin_c-inicio_c)
