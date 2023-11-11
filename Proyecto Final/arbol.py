@@ -2,7 +2,6 @@ import sys
 
 sys.setrecursionlimit(10000)
 
-
 class Node:
     def __init__(self, data, label, predicted_label):
         self.data = data
