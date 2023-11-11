@@ -31,7 +31,7 @@ class Arbol:
     def inorden_traversal(self, node):
         if node is not None:
             self.inorden_traversal(node.left)
-            print(f"Data: {node.data}, Actual Label: {node.label}, Predicted Label: {node.predicted_label}")
+            print(f"Data: {node.data}, Actual Label: {node.label}, Predicted Label: {node.predicted_label}\n")
             self.inorden_traversal(node.right)
 
     def inorden(self):
